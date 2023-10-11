@@ -37,7 +37,7 @@ row.insertAdjacentHTML('beforeend', `
         const currency = Object.values(arr[i].currencies).map(item => {return item.symbol});
         const currency1 = Object.values(arr[i].currencies).map(item => {return item.name});
               
-        renderCard(flags, name, region, population,language, currency,currency1);
+        renderCard(flags, name, region, population, language, currency, currency1);
       
 
         }});

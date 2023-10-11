@@ -1,0 +1,13 @@
+body {
+    background-color: black;
+}
+
+
+
+.container {
+    max-width: 1100px;
+    background-color: white;
+}
+.row {
+    margin: 80px; 0
+}
