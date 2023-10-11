@@ -26,7 +26,7 @@ row.insertAdjacentHTML('beforeend', `
       fetch('https://restcountries.com/v3.1/all')
       .then(response => response.json())
       .then(arr => {
-        console.log(arr);
+       
         for (let i = 0; i <= arr.length; i += 10) {
 
         const flags = arr[i].flags.svg;
