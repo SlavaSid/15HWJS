@@ -33,9 +33,18 @@ row.insertAdjacentHTML('beforeend', `
         const name = arr[i].name.official;
         const region = arr[i].region;
         const population = ((arr[i].population) / 10**6).toFixed(2);
-        const language = Object.values(arr[i].languages);
-        const currency = Object.values(arr[i].currencies).map(item => {return item.symbol});
-        const currency1 = Object.values(arr[i].currencies).map(item => {return item.name});
+        const language = Object.values(arr[i].languages).join();
+        //console.log(language);
+        if (language === undefined) {
+          language = 'there is no language'
+        };
+        const currency = Object.values(arr[i].currencies).map(item => {return item.symbol}).join();
+        const currency1 = Object.values(arr[i].currencies).map(item => {return item.name}).join();
+        if (currency1 === undefined) {
+          currency1 = 'there is no currency'
+        };
+        //console.log(currency1);
+        //console.log(currency1);
               
         renderCard(flags, name, region, population, language, currency, currency1);
       
